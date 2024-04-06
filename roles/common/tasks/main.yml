@@ -1,3 +1,12 @@
 ---
-- name: install zip and vim
-  apt: name=zip,vim state=absent
+- name: Install Vim and Zip
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Install Vim and Zip
+      package:
+        name:
+          - vim
+          - zip
+      state: present
