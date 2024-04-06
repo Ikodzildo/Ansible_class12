@@ -1,11 +1,10 @@
 ---
 - name: Install Vim and Zip
-  include_tasks: task.yml
 
-#  tasks:
-#    - name: Install Vim and Zip
-#      package:
-#        name:
-#          - vim
-#          - zip
-#        state: present
+  tasks:
+    - name: Install Vim and Zip
+      package:
+        name:
+          - vim
+          - zip
+        state: present
