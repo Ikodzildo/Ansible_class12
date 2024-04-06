@@ -1,0 +1,6 @@
+---
+- name: Install zip and vim
+  hosts: servers
+
+  roles:
+    - common
