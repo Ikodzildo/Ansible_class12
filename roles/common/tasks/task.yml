@@ -1,0 +1,10 @@
+---
+- name: Install Vim and Zip
+
+  tasks:
+    - name: Install Vim and Zip
+      package:
+        name:
+          - vim
+          - zip
+        state: present

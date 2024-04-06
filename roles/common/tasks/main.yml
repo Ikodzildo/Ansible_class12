@@ -1,12 +1,13 @@
 ---
-- name: Install Vim and Zip
-  hosts: all
-  become: yes
+#- name: Install Vim and Zip
+#  hosts: servers
+#
+#  tasks:
+#    - name: Install Vim and Zip
+#      package:
+#        name:
+#          - vim
+#          - zip
+#        state: present
 
-  tasks:
-    - name: Install Vim and Zip
-      package:
-        name:
-          - vim
-          - zip
-      state: present
+- include_tasks: tasks.yml
