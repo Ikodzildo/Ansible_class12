@@ -1,10 +1,19 @@
 ---
-- name: Install Vim and Zip
+#- name: Install Vim and Zip
+#
+#  tasks:
+#    - name: Install Vim and Zip
+#      package:
+#        name:
+#          - vim
+#          - zip
+#        state: present
 
-  tasks:
-    - name: Install Vim and Zip
-      package:
-        name:
-          - vim
-          - zip
-        state: present
+- name: Install Vim and Zip
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - vim
+    - zip
+  become: true
